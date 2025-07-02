@@ -48,6 +48,7 @@ dotnet run --project TaskTrackerAPI
 cd task-tracker-ui
 npm install
 ng serve
+```
 
 ## 🌐 Build Angular for MVC Hosting
 
@@ -55,6 +56,7 @@ ng serve
 
 ```bash
 npm run build:mvc
+```
 
 ### This drops the production build into the appropriate location for .NET to serve.
 ---
