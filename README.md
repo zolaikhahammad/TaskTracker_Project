@@ -28,6 +28,37 @@ A full-stack task management system built with ASP.NET Core Web API and Angular.
 
 ---
 
+## 🛠️ Setup Instructions
+
+### ⚙️ Backend Setup (ASP.NET Core API)
+
+1. Navigate to the project root:
+
+```bash
+cd TaskTrackerAPI
+dotnet ef migrations add InitialCreate --project TaskTracker.Infrastructure --startup-project TaskTrackerAPI
+dotnet ef database update --project TaskTracker.Infrastructure --startup-project TaskTrackerAPI
+dotnet run --project TaskTrackerAPI
+
+## 🌐 Frontend Setup (Angular)
+
+### Navigate to the frontend project:
+
+```bash
+cd task-tracker-ui
+npm install
+ng serve
+
+## 🌐 Build Angular for MVC Hosting
+
+### To build Angular and place output in MVC's wwwroot folder:
+
+```bash
+npm run build:mvc
+
+### This drops the production build into the appropriate location for .NET to serve.
+---
+
 ## 🧩 Design Decisions
 
 - **Clean Architecture** separation for maintainability.
@@ -57,7 +88,7 @@ Returns appropriate HTTP codes: `200`, `201`, `204`, `404`, `500`
 
 - `TaskPriority` is passed as an integer.
 - `IsCompleted` is optional for updates.
-- `Authentication` No authentication or authorization is required in current scope.
+- `Authentication`  was not required in current scope.
 - `Filter` user-specific filtering was required for tasks.
 ---
 
