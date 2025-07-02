@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml"; 
+}
+
+<button class="btn btn-outline-primary ms-2 mt-2" onclick="window.refreshTasks && window.refreshTasks()">
+    🔄 Refresh Tasks with AJAX call
+</button>
+
+<div id="angular-container">
+    <app-root></app-root>
+</div>
+
