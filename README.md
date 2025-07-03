@@ -39,6 +39,7 @@ cd TaskTrackerAPI
 dotnet ef migrations add InitialCreate --project TaskTracker.Infrastructure --startup-project TaskTrackerAPI
 dotnet ef database update --project TaskTracker.Infrastructure --startup-project TaskTrackerAPI
 dotnet run --project TaskTrackerAPI
+```
 
 ## 🌐 Frontend Setup (Angular)
 
@@ -91,7 +92,7 @@ Returns appropriate HTTP codes: `200`, `201`, `204`, `404`, `500`
 - `TaskPriority` is passed as an integer.
 - `IsCompleted` is optional for updates.
 - `Authentication`  was not required in current scope.
-- `Filter` user-specific filtering was required for tasks.
+- `Filter` user-specific filtering was not required for tasks.
 ---
 
 ## 🧪 Testing Strategy
